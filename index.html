@@ -6,49 +6,109 @@
     <title>Marcel Palma | Portafolio de Ciencia de Datos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #0f172a; --secondary: #3b82f6; --accent: #10b981; --bg: #f8fafc; }
-        body { font-family: 'Inter', system-ui, sans-serif; margin: 0; background: var(--bg); color: #1e293b; line-height: 1.5; }
+        :root { 
+            --primary: #0f172a; 
+            --secondary: #3b82f6; 
+            --accent: #10b981; 
+            --bg: #f8fafc; 
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            margin: 0; 
+            background: var(--bg); 
+            color: var(--text-main); 
+            line-height: 1.5; 
+        }
         
-        header { background: var(--primary); color: white; padding: 4rem 10%; border-bottom: 4px solid var(--secondary); }
+        header { 
+            background: var(--primary); 
+            color: white; 
+            padding: 4rem 10%; 
+            border-bottom: 4px solid var(--secondary); 
+        }
+
         .bio { max-width: 800px; font-size: 1.1rem; opacity: 0.9; margin-top: 1rem; }
 
         .container { max-width: 1400px; margin: auto; padding: 3rem 2rem; }
         
-        /* Filtros visuales por Siglas */
-        .sigla-tag { 
-            display: inline-block; padding: 2px 8px; border-radius: 4px; 
-            font-size: 0.75rem; font-weight: 800; margin-bottom: 10px;
-            color: white;
-        }
-        .bg-ml { background: #8b5cf6; } /* Machine Learning */
-        .bg-ds { background: #3b82f6; } /* Data Science */
-        .bg-da { background: #10b981; } /* Data Analytics */
-        .bg-de { background: #f59e0b; } /* Data Engineering */
-        .bg-ab { background: #ef4444; } /* A/B Testing */
-        .bg-bi { background: #06b6d4; } /* Business Intelligence */
-        .bg-dq { background: #64748b; } /* Data Quality */
-        .bg-st { background: #ec4899; } /* Statistics / SQL */
-
         .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
             gap: 20px; 
+            margin-bottom: 4rem;
         }
 
+        /* Estilos de Tarjetas */
         .card { 
-            background: white; border-radius: 12px; padding: 1.5rem; 
-            border: 1px solid #e2e8f0; transition: 0.3s;
-            display: flex; flex-direction: column;
+            background: white; 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            border: 1px solid #e2e8f0; 
+            transition: 0.3s;
+            display: flex; 
+            flex-direction: column;
+            height: 100%;
+            box-sizing: border-box;
         }
-        .card:hover { transform: translateY(-5px); border-color: var(--secondary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        .card:hover { 
+            transform: translateY(-5px); 
+            border-color: var(--secondary); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+        }
         
-        .card h3 { margin: 0; font-size: 1rem; color: var(--primary); height: 3rem; overflow: hidden; display: flex; align-items: center; }
-        .card p { font-size: 0.85rem; color: #64748b; margin: 1rem 0; flex-grow: 1; }
+        .sigla-tag { 
+            display: inline-block; padding: 2px 8px; border-radius: 4px; 
+            font-size: 0.75rem; font-weight: 800; margin-bottom: 10px;
+            color: white; width: fit-content;
+        }
+
+        /* Colores de Etiquetas */
+        .bg-ml { background: #8b5cf6; } .bg-ds { background: #3b82f6; }
+        .bg-da { background: #10b981; } .bg-de { background: #f59e0b; }
+        .bg-ab { background: #ef4444; } .bg-bi { background: #06b6d4; }
+        .bg-dq { background: #64748b; } .bg-st { background: #ec4899; }
+        .bg-aa { background: #f43f5e; } .bg-dl { background: #14b8a6; }
+
+        .card h3 { margin: 0; font-size: 1rem; color: var(--primary); min-height: 3rem; display: flex; align-items: center; }
+        .card p { font-size: 0.85rem; color: var(--text-muted); margin: 1rem 0; flex-grow: 1; }
         
         .btn-link { 
             text-decoration: none; color: var(--secondary); font-weight: 700; 
             font-size: 0.8rem; display: flex; align-items: center; gap: 5px; 
         }
+
+        /* Sección de Habilidades Corregida */
+        .skills-container { 
+            background: white; 
+            padding: 2.5rem; 
+            border-radius: 12px; 
+            border: 1px solid #e2e8f0;
+            margin-top: 2rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-group {
+            border-left: 3px solid var(--secondary);
+            padding-left: 1rem;
+        }
+
+        .section-title { font-weight: 800; color: var(--primary); display: block; margin-bottom: 0.25rem; }
+
+        /* Publicaciones */
+        .links-section { margin-top: 3rem; }
+        .link-item { list-style: none; margin-bottom: 1rem; padding: 0; }
+        .link-item a { color: var(--secondary); font-weight: 700; text-decoration: none; }
+        .link-item span { color: var(--text-muted); font-size: 0.9rem; display: block; }
 
         footer { background: var(--primary); color: white; padding: 3rem; text-align: center; margin-top: 4rem; }
     </style>
@@ -59,6 +119,7 @@
     <h1>Marcel Palma</h1>
     <p class="bio">Data Analytics & Scientist. Combino la ciencia de datos con una amplia formación académica en negocios: gestión, marketing, contabilidad, finanzas, proyectos, transformación digital, estrategia y docencia..</p>
 </header>    
+    
 <div class="container">
     <div class="grid">
         <div class="card"><span class="sigla-tag bg-ml">ML</span><h3>Early Warning System - Customer Churn</h3><p>Sistema de alerta temprana para predecir la fuga de clientes utilizando modelos de clasificación avanzados.</p><a href="https://github.com/mapace22/ML-Early-Warning-System-Customer-Churn" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
