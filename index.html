@@ -136,19 +136,15 @@
     
 <div class="container">
     <style>
-    .legend-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 10px;
-        background: #f8fafc;
-        padding: 20px;
-        border-radius: 12px;
-        margin-bottom: 2rem;
-    }
-    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
-</style>
+    .legend-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
     <div class="legend-container">
-        <span style="font-size: 0.8rem; font-weight: 800; color: var(--text-muted); width: 100%; text-align: center; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Diccionario de Especialidades</span>
+        <span style="font-size: 0.8rem; font-weight: 800; color: var(--text-muted); width: 100%; text-align: center; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Key Tags</span>
         <div class="legend-item"><span class="sigla-tag bg-ml">ML</span> <small>Machine Learning</small></div>
         <div class="legend-item"><span class="sigla-tag bg-dl">DL</span> <small>Deep Learning</small></div>
         <div class="legend-item"><span class="sigla-tag bg-ab">AB</span> <small>A/B Testing</small></div>
