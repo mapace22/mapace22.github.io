@@ -66,12 +66,18 @@
             color: white; width: fit-content;
         }
 
-        /* Colores de Etiquetas */
-        .bg-ml { background: #8b5cf6; } .bg-ds { background: #3b82f6; }
-        .bg-da { background: #10b981; } .bg-de { background: #f59e0b; }
-        .bg-ab { background: #ef4444; } .bg-bi { background: #06b6d4; }
-        .bg-dq { background: #64748b; } .bg-st { background: #ec4899; }
-        .bg-aa { background: #f43f5e; } .bg-dl { background: #14b8a6; }
+        /* Colores de Etiquetas Unificados y Diferenciados */
+        .bg-ml { background: #8b5cf6; } /* Morado - Machine Learning */
+        .bg-dl { background: #14b8a6; } /* Teal - Deep Learning */
+        .bg-ds { background: #3b82f6; } /* Azul - Data Science */
+        .bg-da { background: #10b981; } /* Verde - Data Analytics */
+        .bg-de { background: #f59e0b; } /* Naranja - Data Engineering */
+        .bg-bd { background: #1e293b; } /* Marino - Big Data (NUEVO) */
+        .bg-aa { background: #f43f5e; } /* Rojo - Advanced Analytics */
+        .bg-ab { background: #ef4444; } /* Rojo Intenso - A/B Testing */
+        .bg-bi { background: #06b6d4; } /* Cian - Business Intelligence */
+        .bg-st { background: #ec4899; } /* Rosa - Statistics / SQL */
+        .bg-dq { background: #64748b; } /* Gris - Data Quality */
 
         .card h3 { margin: 0; font-size: 1rem; color: var(--primary); min-height: 3rem; display: flex; align-items: center; }
         .card p { font-size: 0.85rem; color: var(--text-muted); margin: 1rem 0; flex-grow: 1; }
@@ -121,18 +127,19 @@
 </header>    
     
 <div class="container">
-    <div class="legend-container" style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; background: white; padding: 15px; border-radius: 10px; border: 1px solid #e2e8f0;">
-        <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); width: 100%; text-align: center; margin-bottom: 5px;">ÁREAS DE ESPECIALIZACIÓN:</span>
+    <div class="legend-container">
+        <span style="font-size: 0.8rem; font-weight: 800; color: var(--text-muted); width: 100%; text-align: center; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Diccionario de Especialidades</span>
         <div class="legend-item"><span class="sigla-tag bg-ml">ML</span> <small>Machine Learning</small></div>
         <div class="legend-item"><span class="sigla-tag bg-dl">DL</span> <small>Deep Learning</small></div>
-        <div class="legend-item"><span class="sigla-tag bg-ds">DS</span> <small>Data Science</small></div>
-        <div class="legend-item"><span class="sigla-tag bg-da">DA</span> <small>Data Analytics</small></div>
-        <div class="legend-item"><span class="sigla-tag bg-de">DE</span> <small>Data Engineering</small></div>
         <div class="legend-item"><span class="sigla-tag bg-ab">AB</span> <small>A/B Testing</small></div>
+        <div class="legend-item"><span class="sigla-tag bg-ds">DS</span> <small>Data Science</small></div>
         <div class="legend-item"><span class="sigla-tag bg-bi">BI</span> <small>Business Intelligence</small></div>
-        <div class="legend-item"><span class="sigla-tag bg-aa">AA</span> <small>Advanced Analytics</small></div>
-        <div class="legend-item"><span class="sigla-tag bg-st">ST</span> <small>Statistics / SQL</small></div>
+        <div class="legend-item"><span class="sigla-tag bg-da">DA</span> <small>Data Analytics</small></div>
+        <div class="legend-item"><span class="sigla-tag bg-bd">BD</span> <small>Big Data</small></div>
         <div class="legend-item"><span class="sigla-tag bg-dq">DQ</span> <small>Data Quality</small></div>
+        <div class="legend-item"><span class="sigla-tag bg-de">DE</span> <small>Data Engineering</small></div>
+        <div class="legend-item"><span class="sigla-tag bg-st">ST</span> <small>Statistics / SQL</small></div>
+        <div class="legend-item"><span class="sigla-tag bg-aa">AA</span> <small>Advanced Analytics</small></div>                  
     </div>
     <div class="grid">
         <div class="card"><span class="sigla-tag bg-ml">ML</span><h3>Early Warning System - Customer Churn</h3><p>Sistema de alerta temprana para predecir la fuga de clientes utilizando modelos de clasificación avanzados.</p><a href="https://github.com/mapace22/ML-Early-Warning-System-Customer-Churn" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
@@ -152,7 +159,7 @@
         <div class="card"><span class="sigla-tag bg-da">DA</span><h3>NBA Advanced Analytics PowerBI</h3><p>Visualización avanzada de métricas de rendimiento de jugadores.</p><a href="https://github.com/mapace22/DA-NBA-Advanced-Analytics-PowerBI" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
         <div class="card"><span class="sigla-tag bg-da">DA</span><h3>LaLiga Performance Dashboard</h3><p>Panel interactivo para seguimiento de métricas competitivas.</p><a href="https://github.com/mapace22/DA-LaLiga-Performance-Dashboard-PowerBI" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
         <div class="card"><span class="sigla-tag bg-da">DA</span><h3>Infocar Market Dashboard</h3><p>Visualización de tendencias en el mercado automotriz.</p><a href="https://github.com/mapace22/SE-Infocar-Market-Dashboard" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
-        <div class="card"><span class="sigla-tag bg-de">BD</span><h3>NBA Hadoop Spark Ecosystem</h3><p>Procesamiento distribuido de grandes volúmenes de datos históricos de la NBA.</p><a href="https://github.com/mapace22/BD-NBA-Hadoop-Spark-Ecosystem" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
+        <div class="card"><span class="sigla-tag bg-bd">BD</span><h3>NBA Hadoop Spark Ecosystem</h3><p>Procesamiento distribuido de grandes volúmenes de datos históricos de la NBA.</p><a href="https://github.com/mapace22/BD-NBA-Hadoop-Spark-Ecosystem" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
         <div class="card"><span class="sigla-tag bg-dq">DQ</span><h3>Instacart Market Basket Analysis</h3><p>Análisis de asociación de productos para optimizar el inventario.</p><a href="https://github.com/mapace22/DQ-Instacart-Market-Basket-Analysis" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
         <div class="card"><span class="sigla-tag bg-dq">DQ</span><h3>Music Streaming Behavior Analysis</h3><p>Análisis de patrones de escucha entre ciudades con Pandas.</p><a href="https://github.com/mapace22/DQ-Music-Streaming-Behavior-Analysis" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
         <div class="card"><span class="sigla-tag bg-dq">DQ</span><h3>Data Quality Engineering Store1</h3><p>Procesos de limpieza y validación de integridad de datos comerciales.</p><a href="https://github.com/mapace22/DQ-Data-Quality-Engineering-Store1" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
