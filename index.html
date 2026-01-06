@@ -86,8 +86,7 @@
             text-decoration: none; color: var(--secondary); font-weight: 700; 
             font-size: 0.8rem; display: flex; align-items: center; gap: 5px; 
         }
-
-        /* Sección de Habilidades Corregida */
+     
         .skills-container { 
             background: white; 
             padding: 2.5rem; 
@@ -103,28 +102,36 @@
             margin-top: 1.5rem;
         }
 
-        .skill-group {
-            border-left: 3px solid var(--secondary);
-            padding-left: 1rem;
-        }
-
+        .skill-group { border-left: 3px solid var(--secondary); padding-left: 1rem; }
         .section-title { font-weight: 800; color: var(--primary); display: block; margin-bottom: 0.25rem; }
 
         /* Publicaciones */
-        .links-section { margin-top: 3rem; }
+        .links-section { margin-top: 3rem; margin-bottom: 3rem; }
         .link-item { list-style: none; margin-bottom: 1rem; padding: 0; }
         .link-item a { color: var(--secondary); font-weight: 700; text-decoration: none; }
         .link-item span { color: var(--text-muted); font-size: 0.9rem; display: block; }
 
-        footer { background: var(--primary); color: white; padding: 3rem; text-align: center; margin-top: 4rem; }
         .legend-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
         }
-        .legend-item { display: flex; align-items: center; gap: 5px; background: white; padding: 5px 10px; border-radius: 20px; border: 1px solid #e2e8f0; }
+        .legend-item { display: flex; align-items: center; gap: 5px; font-size: 0.85rem; color: var(--text-main); }
+        
+        /* Layout para Experiencia y Educación */
+        .cv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        footer { background: var(--primary); color: white; padding: 3rem; text-align: center; margin-top: 4rem; }
     </style>    
 </head>
 <body>
@@ -132,9 +139,10 @@
 <header>
     <h1>Marcel Palma</h1>
     <p class="bio">Data Scientist & Business Analytics. Bridging advanced data science with a robust background in Business Strategy, Marketing, Accounting, Finance and Digital Transformation. I specialize in turning complex datasets into strategic insights through Machine Learning, predictive modeling and business intelligence.</p>
-</header>    
-  
-    <div class="legend-container">
+</header>
+    
+<div class="container">
+      <div class="legend-container">
         <span style="font-size: 0.8rem; font-weight: 800; color: var(--text-muted); width: 100%; text-align: center; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Key Tags</span>
         <div class="legend-item"><span class="sigla-tag bg-ml">ML</span> <small>Machine Learning</small></div>
         <div class="legend-item"><span class="sigla-tag bg-dl">DL</span> <small>Deep Learning</small></div>
@@ -148,6 +156,7 @@
         <div class="legend-item"><span class="sigla-tag bg-st">ST</span> <small>Statistics / SQL</small></div>
         <div class="legend-item"><span class="sigla-tag bg-aa">AA</span> <small>Advanced Analytics</small></div>                  
     </div>
+    
     <div class="grid">
         <div class="card"><span class="sigla-tag bg-ml">ML</span><h3>Early Warning System - Customer Churn</h3><p>Early warning system to predict customer attrition using advanced classification models.</p><a href="https://github.com/mapace22/ML-Early-Warning-System-Customer-Churn" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
         <div class="card"><span class="sigla-tag bg-ml">ML</span><h3>Cardiac Anomaly Classifier</h3><p>Supervised learning algorithms for the detection and classification of anomalies in cardiac data.</p><a href="https://github.com/mapace22/ML-Cardiac-Anomaly-Classifier" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
@@ -176,15 +185,13 @@
         <div class="card"><span class="sigla-tag bg-st">ST</span><h3>SQL Book Market Analysis</h3><p>Analyzing book industry trends during the pandemic through SQL queries.</p><a href="https://github.com/mapace22/ST-SQL-book-market-analysis" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
         <div class="card"><span class="sigla-tag bg-aa">AA</span><h3>Video Game Market Success Patterns</h3><p>Identifying key success factors and trends for global video game releases.</p><a href="https://github.com/mapace22/AA-Video-Game-Market-Success-Patterns" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
         <div class="card"><span class="sigla-tag bg-aa">AA</span><h3>Customer Analytics Tooling Store1</h3><p>Development of advanced segmentation tools for retail business intelligence.</p><a href="https://github.com/mapace22/AA-Customer-Analytics-Tooling-Store1" class="btn-link"><i class="fab fa-github"></i> REPOSITORIO</a></div>
-     </div>    
+    </div>    
 
     <div class="skills-container">
-    <h2>Technical & Strategic Expertise</h2>
-    <p>Hybrid profile with the ability to deploy advanced models and analyze high-level business impact:</p>
-    
-    <div class="skills-grid">
-        <div class="skill-group">
-            <span class="section-title">Data Science & AI</span>
+        <h2>Technical & Strategic Expertise</h2>
+        <p>Hybrid profile with the ability to deploy advanced models and analyze high-level business impact:</p>
+        <div class="skills-grid">
+            <div class="skill-group"> <span class="section-title">Data Science & AI</span>
             <div class="skill-list">
                 <strong>Machine Learning:</strong> Supervised and unsupervised, Scikit-Learn, XGBoost, TensorFlow, Keras, PyTorch.
                 <br><strong>Deep Learning:</strong> CNN Architectures.
